@@ -88,118 +88,134 @@ nav ul li {
   user-select: none;
 }
 
-.about-us {
-  padding: 60px 20px;
-  background-color: #f8f9fa;
-  color: #333;
-  line-height: 1.8;
+.contact-section {
+  padding: 60px 10%;
+  text-align: center;
 }
 
-.about-us h1, 
-.about-us h2, 
-.about-us h3 {
-  text-align: center;
+.contact-section h1 {
+  font-size: 2.2em;
   color: #0078ff;
-  margin-top: 30px;
-  margin-bottom: 15px;
-}
-
-.about-hero {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.about-hero-image {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 12px;
   margin-top: 100px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-
-.about-us p {
-  margin-bottom: 15px;
+.contact-section p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
 }
 
-.container {
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.timeline ul {
-  list-style: none;
-  padding: 0;
+.contact-container h2 {
+    color: #0078ff;
+}
+
+.contact-form, .contact-info {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 320px;
+  max-width: 48%;
   text-align: left;
 }
 
-.timeline li {
-  margin: 5px 0;
+.form-group {
+  margin-bottom: 20px;
 }
 
-.about-image {
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+input, textarea, select {
   width: 100%;
-  border-radius: 10px;
-  margin: 25px 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.core-values img{
-  margin-left: 200px;
-  width: 700px;
-  height: 450px;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.partners {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.partners img {
-  width: 100px;
-  margin: 10px;
-  opacity: 0.8;
-  transition: transform 0.3s;
-}
-
-.partners img:hover {
-  transform: scale(1.1);
-  opacity: 1;
-}
-
-blockquote {
-  font-style: italic;
-  background-color: #eef6ff;
-  border-left: 4px solid #0078ff;
-  padding: 15px 20px;
-  margin: 20px auto;
-  max-width: 800px;
-  border-radius: 6px;
-}
-
-.cta {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.btn {
-  display: inline-block;
-  background-color: #0078ff;
-  color: #fff;
-  padding: 12px 30px;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s;
-  margin-bottom: 30px;
+  outline: none;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #0078ff;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 20px; 
+  margin-top: 10px;
+}
+
+.checkbox-group label {
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f7f9fc;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.checkbox-group label:hover {
+  background: #eaf2ff;
+}
+
+.checkbox-group input[type="checkbox"] {
+  accent-color: #0078ff;
+  transform: scale(1.1);
+}
+
+.contact-container .btn {
+  background-color: #0078ff;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
   background-color: #005fcc;
+}
+
+.contact-info h2 {
+  color: #0078ff;
+  margin-bottom: 15px;
+}
+
+.contact-info a {
+  color: #0078ff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.map-container {
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 
@@ -245,7 +261,7 @@ blockquote {
 
 
 .footer-links ul li a:hover {
-  color: #5e6565;
+  color: #5e6365;
 }
 
 
@@ -261,8 +277,7 @@ blockquote {
 
 .footer-contact a:hover{
     text-decoration: underline;
-}    
-
+}
 .footer-social .social-icons {
   display: flex;
   gap: 15px;

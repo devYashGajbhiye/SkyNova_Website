@@ -38,4 +38,30 @@ dots.forEach((dot, i) => dot.addEventListener("click", () => showSlide(i)));
 
 setInterval(nextSlide, 3000);
 
+const contactForm = document.querySelector("#contactForm");
+  if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = document.querySelector("#name").value.trim();
+      const email = document.querySelector("#email").value.trim();
+      const message = document.querySelector("#message").value.trim();
+
+      if (name === "" || email === "" || message === "") {
+        alert("⚠️ Please fill in all fields before submitting!");
+        return;
+      }
+
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!emailPattern.test(email)) {
+        alert("❌ Please enter a valid email address!");
+        return;
+      }
+
+      alert(`✅ Thank you, ${name}! Your message has been sent successfully.`);
+      contactForm.reset();
+    });
+  }
+
+
 });
