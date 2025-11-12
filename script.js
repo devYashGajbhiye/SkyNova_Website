@@ -9,6 +9,16 @@ if (hamburger) {
     });
 }
 
+
+const currentLocation = location.href;
+const navLink = document.querySelectorAll("nav ul li a");
+
+for (let link of navLink) {
+  if (link.href === currentLocation) {
+    link.classList.add("active");
+  }
+}
+
 let currentIndex = 0;
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
